@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Camilo de Azevedo</title>
+    <link>https://camilotk.github.io/camilodeazevedo.online/</link>
+    <description>Recent content on Camilo de Azevedo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 27 Dec 2023 18:19:37 -0300</lastBuildDate><atom:link href="https://camilotk.github.io/camilodeazevedo.online/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First</title>
+      <link>https://camilotk.github.io/camilodeazevedo.online/blog/first/</link>
+      <pubDate>Wed, 27 Dec 2023 18:19:37 -0300</pubDate>
+      
+      <guid>https://camilotk.github.io/camilodeazevedo.online/blog/first/</guid>
+      <description>Hello, Hugo!</description>
+      <content:encoded><![CDATA[<p>Hello, Hugo!</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

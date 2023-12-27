@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://camilotk.github.io/camilodeazevedo.online/sitemap.xml

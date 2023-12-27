@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Camilo de Azevedo</title>
+    <link>https://camilotk.github.io/camilodeazevedo.online/tags/</link>
+    <description>Recent content in Tags on Camilo de Azevedo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 27 Dec 2023 18:19:37 -0300</lastBuildDate><atom:link href="https://camilotk.github.io/camilodeazevedo.online/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>content</title>
+      <link>https://camilotk.github.io/camilodeazevedo.online/tags/content/</link>
+      <pubDate>Wed, 27 Dec 2023 18:19:37 -0300</pubDate>
+      
+      <guid>https://camilotk.github.io/camilodeazevedo.online/tags/content/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>shitposting</title>
+      <link>https://camilotk.github.io/camilodeazevedo.online/tags/shitposting/</link>
+      <pubDate>Wed, 27 Dec 2023 18:19:37 -0300</pubDate>
+      
+      <guid>https://camilotk.github.io/camilodeazevedo.online/tags/shitposting/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
