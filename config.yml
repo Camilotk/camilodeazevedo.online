@@ -1,4 +1,4 @@
-baseURL: "localhost:1313"
+baseURL: "https://camilotk.github.io/camilodeazevedo.online/"
 title: Camilo de Azevedo
 paginate: 5
 theme: PaperModX
