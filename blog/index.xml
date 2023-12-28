@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blogs on Camilo de Azevedo</title>
-    <link>https://camilotk.github.io/camilodeazevedo.online/blog/</link>
+    <link>https://camilodeazevedo.online/blog/</link>
     <description>Recent content in Blogs on Camilo de Azevedo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 27 Dec 2023 20:05:04 -0300</lastBuildDate><atom:link href="https://camilotk.github.io/camilodeazevedo.online/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Dec 2023 20:05:04 -0300</lastBuildDate><atom:link href="https://camilodeazevedo.online/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Second</title>
-      <link>https://camilotk.github.io/camilodeazevedo.online/blog/second/</link>
+      <link>https://camilodeazevedo.online/blog/second/</link>
       <pubDate>Wed, 27 Dec 2023 20:05:04 -0300</pubDate>
       
-      <guid>https://camilotk.github.io/camilodeazevedo.online/blog/second/</guid>
+      <guid>https://camilodeazevedo.online/blog/second/</guid>
       <description>Another post!</description>
       <content:encoded><![CDATA[<p>Another post!</p>
 ]]></content:encoded>
@@ -19,10 +19,10 @@
     
     <item>
       <title>First</title>
-      <link>https://camilotk.github.io/camilodeazevedo.online/blog/first/</link>
+      <link>https://camilodeazevedo.online/blog/first/</link>
       <pubDate>Wed, 27 Dec 2023 18:19:37 -0300</pubDate>
       
-      <guid>https://camilotk.github.io/camilodeazevedo.online/blog/first/</guid>
+      <guid>https://camilodeazevedo.online/blog/first/</guid>
       <description>Hello, Hugo!</description>
       <content:encoded><![CDATA[<p>Hello, Hugo!</p>
 ]]></content:encoded>
