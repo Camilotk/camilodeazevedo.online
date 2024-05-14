@@ -18,6 +18,8 @@ Como atualmente estou usando o Windows como meu sistema operacional principal (d
 
 Antes de começarmos, é importante garantir que o PowerShell e todos os outros programas do Windows estejam atualizados. Isso garantirá que você tenha as últimas funcionalidades e correções de segurança.
 
+Para isso eu gosto de utilizar o **Windows Package Manager** ([winget](https://pt.wikipedia.org/wiki/Windows_Package_Manager)) que é o gerenciador de dependências do Windows e já vem instalado por padrão nas novas builds/atualizações do Windows. 
+
 Abra o PowerShell como administrador e execute os seguintes comandos:
 
 ```powershell
@@ -26,7 +28,6 @@ winget upgrade --all
 ```powershell
 winget install --id Microsoft.Powershell --source winget
 ```
-
 O primeiro comando atualiza todos os programas instalados, enquanto o segundo reinstala o PowerShell para a versão mais recente disponível.
 
 ## Instalando o WSL 2
@@ -60,9 +61,10 @@ Para uma melhor experiência visual e funcional, vamos personalizar o terminal c
    - Em 'Perfil Padrão', escolha 'Ubuntu'.
 
 3. **Aplicando o Esquema de Cores Dracula:**
+   - Acesse o [site do Dracula](https://draculatheme.com/windows-terminal)
    - Abra o Windows Terminal e clique na seta para baixo ˅ na barra de menu.
    - Selecione 'Configurações' ou use `Ctrl + ,` para abrir diretamente.
-   - No arquivo `settings.json`, encontre a seção 'schemes' e adicione o conteúdo do `dracula.json`.
+   - No arquivo `settings.json`, encontre a seção 'schemes' e adicione o conteúdo em `json` que está no site.
 
 4. **Personalizando a Aparência do Ubuntu no Terminal:**
    - Na barra lateral, selecione 'Ubuntu' e depois 'Aparência'.
@@ -127,13 +129,19 @@ echo 'source /usr/share/bash-completion/completions/pacstall' >>~/.zshrc
 
 ## Instalando e Configurando o (Neo)Vim
 
-O (Neo)Vim é um editor de texto avançado. Para instalar e configurar:
+No Curso o Prof. usa VIM. Porém, eu pessoalmente prefiro utilizar o Neovim que é um fork criado para adicionar o suporte a Lua como linguagem de extensão. 
+
+A vantagem em usar Lua para a configuração são muitas, começando pelo fato de que é uma linguagem de programação de verdade - diferente de VimScript e Vim9 que são usadas apenas para configurar o Vim - ela não só é uma execelente linguagem para usar como complemento em aplicações C como para embutir em programas, além de ser bastante popular no meio de Jogos.
 
 ```bash
 pacstall -I neovim
 ```
 
-Siga as instruções de configuração recomendadas por especialistas, como as do Akita.
+**Porque usar o Pacstall para instalar o Neovim?**
+> A vantagem de instalar pelo **pacstall** ao invés do **apt** é que o Pacstall vai compilar e instalar a _última versão_ do programa que é muito mais atualizada que a versão nos repositórios do Ubuntu e que vai ter melhor suporte a diversos plugins.
+
+
+Após instalar, é só usar `nvim` para abrir o Neovim.
 
 ## Instalando o Docker
 
