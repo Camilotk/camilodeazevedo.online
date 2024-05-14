@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Camilo de Azevedo</title>
-    <link>https://camilodeazevedo.online/</link>
-    <description>Recent content on Camilo de Azevedo</description>
+    <title>UBL on Camilo de Azevedo</title>
+    <link>https://camilodeazevedo.online/tags/ubl/</link>
+    <description>Recent content in UBL on Camilo de Azevedo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 May 2024 21:15:08 -0300</lastBuildDate><atom:link href="https://camilodeazevedo.online/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 May 2024 21:15:08 -0300</lastBuildDate><atom:link href="https://camilodeazevedo.online/tags/ubl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup do Curso de C no Windows com WSL</title>
       <link>https://camilodeazevedo.online/blog/setup/</link>

@@ -5,26 +5,106 @@
     <link>https://camilodeazevedo.online/blog/</link>
     <description>Recent content in Blogs on Camilo de Azevedo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 27 Dec 2023 20:05:04 -0300</lastBuildDate><atom:link href="https://camilodeazevedo.online/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 May 2024 21:15:08 -0300</lastBuildDate><atom:link href="https://camilodeazevedo.online/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Second</title>
-      <link>https://camilodeazevedo.online/blog/second/</link>
-      <pubDate>Wed, 27 Dec 2023 20:05:04 -0300</pubDate>
+      <title>Setup do Curso de C no Windows com WSL</title>
+      <link>https://camilodeazevedo.online/blog/setup/</link>
+      <pubDate>Mon, 13 May 2024 21:15:08 -0300</pubDate>
       
-      <guid>https://camilodeazevedo.online/blog/second/</guid>
-      <description>Another post!</description>
-      <content:encoded><![CDATA[<p>Another post!</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>First</title>
-      <link>https://camilodeazevedo.online/blog/first/</link>
-      <pubDate>Wed, 27 Dec 2023 18:19:37 -0300</pubDate>
-      
-      <guid>https://camilodeazevedo.online/blog/first/</guid>
-      <description>Hello, Hugo!</description>
-      <content:encoded><![CDATA[<p>Hello, Hugo!</p>
+      <guid>https://camilodeazevedo.online/blog/setup/</guid>
+      <description>Contexto:
+Na UBL (Universidade Brasileira Livre), estamos organizando um grupo de estudos de C. Selecionamos alguns materiais, como o Programação Moderna em C e o C para Seres Humanos, por serem recursos livres, gratuitos e em português sobre a linguagem C.
+Como atualmente estou usando o Windows como meu sistema operacional principal (devido a algumas aplicações específicas), resolvi criar este guia para mostrar como configurei meu ambiente de desenvolvimento.
+Atualizando o PowerShell e os Programas do Windows Antes de começarmos, é importante garantir que o PowerShell e todos os outros programas do Windows estejam atualizados.</description>
+      <content:encoded><![CDATA[<p><strong>Contexto:</strong></p>
+<blockquote>
+<p>Na <a href="https://ulivre.dev/">UBL</a> (Universidade Brasileira Livre), estamos organizando um grupo de estudos de C. Selecionamos alguns materiais, como o <a href="https://youtube.com/playlist?list=PLIfZMtpPYFP5qaS2RFQxcNVkmJLGQwyKE&amp;si=XPRRx0g_8hASdQeN">Programação Moderna em C</a> e o <a href="https://plankiton.github.io/CParaSeresHumanos/">C para Seres Humanos</a>, por serem recursos livres, gratuitos e em português sobre a linguagem C.</p>
+</blockquote>
+<p>Como atualmente estou usando o Windows como meu sistema operacional principal (devido a algumas aplicações específicas), resolvi criar este guia para mostrar como configurei meu ambiente de desenvolvimento.</p>
+<h2 id="atualizando-o-powershell-e-os-programas-do-windows">Atualizando o PowerShell e os Programas do Windows</h2>
+<p>Antes de começarmos, é importante garantir que o PowerShell e todos os outros programas do Windows estejam atualizados. Isso garantirá que você tenha as últimas funcionalidades e correções de segurança.</p>
+<p>Abra o PowerShell como administrador e execute os seguintes comandos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">upgrade</span> <span class="p">-</span><span class="n">-all</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-id</span> <span class="n">Microsoft</span><span class="p">.</span><span class="py">Powershell</span> <span class="p">-</span><span class="n">-source</span> <span class="n">winget</span>
+</span></span></code></pre></div><p>O primeiro comando atualiza todos os programas instalados, enquanto o segundo reinstala o PowerShell para a versão mais recente disponível.</p>
+<h2 id="instalando-o-wsl-2">Instalando o WSL 2</h2>
+<p>Com o sistema atualizado, podemos prosseguir com a instalação do WSL 2. O WSL permite que você execute um ambiente Linux diretamente no Windows sem a necessidade de uma máquina virtual.</p>
+<p>Digite o seguinte comando no PowerShell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="p">-</span><span class="n">-install</span>
+</span></span></code></pre></div><p>Após a execução, será necessário reiniciar o computador. Ao reiniciar, o Windows solicitará que você crie um usuário e senha para o Ubuntu, que será instalado por padrão.</p>
+<p>Quando o Ubuntu estiver instalado, abra o terminal do Ubuntu e atualize os pacotes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</span></span></code></pre></div><h2 id="configurando-o-terminal-para-abrir-o-wsl-por-padrão">Configurando o Terminal para Abrir o WSL por Padrão</h2>
+<p>Para uma melhor experiência visual e funcional, vamos personalizar o terminal com uma fonte mais agradável e um esquema de cores diferenciado.</p>
+<ol>
+<li>
+<p><strong>Instalando a Fonte JetBrains Mono NerdFont:</strong></p>
+<ul>
+<li>No Windows, baixe a fonte JetBrains Mono NerdFont do site <a href="https://www.nerdfonts.com/font-downloads">Nerd Fonts</a>.</li>
+<li>Descompacte o arquivo baixado e instale todas as fontes presentes na pasta <code>.ttf</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Definindo o Perfil Padrão para Ubuntu:</strong></p>
+<ul>
+<li>No Windows Terminal, clique na seta para baixo ao lado do título e selecione &lsquo;Opções&rsquo;.</li>
+<li>Em &lsquo;Perfil Padrão&rsquo;, escolha &lsquo;Ubuntu&rsquo;.</li>
+</ul>
+</li>
+<li>
+<p><strong>Aplicando o Esquema de Cores Dracula:</strong></p>
+<ul>
+<li>Abra o Windows Terminal e clique na seta para baixo ˅ na barra de menu.</li>
+<li>Selecione &lsquo;Configurações&rsquo; ou use <code>Ctrl + ,</code> para abrir diretamente.</li>
+<li>No arquivo <code>settings.json</code>, encontre a seção &lsquo;schemes&rsquo; e adicione o conteúdo do <code>dracula.json</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Personalizando a Aparência do Ubuntu no Terminal:</strong></p>
+<ul>
+<li>Na barra lateral, selecione &lsquo;Ubuntu&rsquo; e depois &lsquo;Aparência&rsquo;.</li>
+<li>Escolha o esquema de cores &lsquo;Dracula&rsquo;.</li>
+<li>Em &lsquo;Fonte&rsquo;, marque &lsquo;Mostrar todas&rsquo; e selecione &lsquo;JetBrains Mono NerdFont&rsquo;.</li>
+</ul>
+</li>
+<li>
+<p><strong>Salve as alterações.</strong></p>
+</li>
+</ol>
+<h2 id="instalando-o-zsh">Instalando o ZSH</h2>
+<p>O ZSH é um shell poderoso e fácil de personalizar. Para instalá-lo, execute:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install zsh -y
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chsh -s <span class="k">$(</span>which zsh<span class="k">)</span>
+</span></span></code></pre></div><h2 id="instalando-o-powerlevel10k">Instalando o Powerlevel10k</h2>
+<p>Powerlevel10k é um tema rápido e bonito para o ZSH. Instale-o com:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;source ~/powerlevel10k/powerlevel10k.zsh-theme&#39;</span> &gt;&gt;~/.zshrc
+</span></span></code></pre></div><p>Siga as instruções de configuração que aparecerão após a instalação.</p>
+<h2 id="instalando-o-zsh-autosuggestions">Instalando o zsh-autosuggestions</h2>
+<p>Para obter sugestões automáticas enquanto digita no terminal, instale o zsh-autosuggestions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh&#39;</span> &gt;&gt;~/.zshrc
+</span></span></code></pre></div><h2 id="instalando-o-pacstall">Instalando o Pacstall</h2>
+<p>Pacstall é um gerenciador de pacotes que facilita a instalação de software. Para instalá-lo, execute:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo bash -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://pacstall.dev/q/install <span class="o">||</span> wget -q https://pacstall.dev/q/install -O -<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>Confirme as instalações conforme solicitado. Isso também instalará a toolchain do GCC para C.</p>
+<p>Adicione o seguinte ao seu <code>.zshrc</code> para habilitar a conclusão automática para o Pacstall:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;\nautoload bashcompinit \nbashcompinit&#39;</span> &gt;&gt;~/.zshrc
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;source /usr/share/bash-completion/completions/pacstall&#39;</span> &gt;&gt;~/.zshrc
+</span></span></code></pre></div><h2 id="instalando-e-configurando-o-neovim">Instalando e Configurando o (Neo)Vim</h2>
+<p>O (Neo)Vim é um editor de texto avançado. Para instalar e configurar:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstall -I neovim
+</span></span></code></pre></div><p>Siga as instruções de configuração recomendadas por especialistas, como as do Akita.</p>
+<h2 id="instalando-o-docker">Instalando o Docker</h2>
+<p>Para instalar o Docker:</p>
+<ul>
+<li>Baixe e instale o Docker do site oficial.</li>
+<li>Vá em &lsquo;Configurações&rsquo; &gt; &lsquo;Recursos&rsquo; &gt; &lsquo;Integração WSL&rsquo; e ative o Ubuntu.</li>
+<li>Aceite os termos de uso.</li>
+</ul>
+<p>Teste sua instalação com:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d -p 80:80 docker/getting-started
+</span></span></code></pre></div><p>Se tudo estiver correto, acesse <a href="http://localhost">http://localhost</a> e você verá a página inicial do Docker.</p>
 ]]></content:encoded>
     </item>
     
