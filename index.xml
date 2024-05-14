@@ -23,6 +23,7 @@ Atualizando o PowerShell e os Programas do Windows Antes de começarmos, é impo
 <p>Como atualmente estou usando o Windows como meu sistema operacional principal (devido a algumas aplicações específicas), resolvi criar este guia para mostrar como configurei meu ambiente de desenvolvimento.</p>
 <h2 id="atualizando-o-powershell-e-os-programas-do-windows">Atualizando o PowerShell e os Programas do Windows</h2>
 <p>Antes de começarmos, é importante garantir que o PowerShell e todos os outros programas do Windows estejam atualizados. Isso garantirá que você tenha as últimas funcionalidades e correções de segurança.</p>
+<p>Para isso eu gosto de utilizar o <strong>Windows Package Manager</strong> (<a href="https://pt.wikipedia.org/wiki/Windows_Package_Manager">winget</a>) que é o gerenciador de dependências do Windows e já vem instalado por padrão nas novas builds/atualizações do Windows.</p>
 <p>Abra o PowerShell como administrador e execute os seguintes comandos:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">upgrade</span> <span class="p">-</span><span class="n">-all</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-id</span> <span class="n">Microsoft</span><span class="p">.</span><span class="py">Powershell</span> <span class="p">-</span><span class="n">-source</span> <span class="n">winget</span>
@@ -54,9 +55,10 @@ Atualizando o PowerShell e os Programas do Windows Antes de começarmos, é impo
 <li>
 <p><strong>Aplicando o Esquema de Cores Dracula:</strong></p>
 <ul>
+<li>Acesse o <a href="https://draculatheme.com/windows-terminal">site do Dracula</a></li>
 <li>Abra o Windows Terminal e clique na seta para baixo ˅ na barra de menu.</li>
 <li>Selecione &lsquo;Configurações&rsquo; ou use <code>Ctrl + ,</code> para abrir diretamente.</li>
-<li>No arquivo <code>settings.json</code>, encontre a seção &lsquo;schemes&rsquo; e adicione o conteúdo do <code>dracula.json</code>.</li>
+<li>No arquivo <code>settings.json</code>, encontre a seção &lsquo;schemes&rsquo; e adicione o conteúdo em <code>json</code> que está no site.</li>
 </ul>
 </li>
 <li>
@@ -92,9 +94,14 @@ Atualizando o PowerShell e os Programas do Windows Antes de começarmos, é impo
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;\nautoload bashcompinit \nbashcompinit&#39;</span> &gt;&gt;~/.zshrc
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;source /usr/share/bash-completion/completions/pacstall&#39;</span> &gt;&gt;~/.zshrc
 </span></span></code></pre></div><h2 id="instalando-e-configurando-o-neovim">Instalando e Configurando o (Neo)Vim</h2>
-<p>O (Neo)Vim é um editor de texto avançado. Para instalar e configurar:</p>
+<p>No Curso o Prof. usa VIM. Porém, eu pessoalmente prefiro utilizar o Neovim que é um fork criado para adicionar o suporte a Lua como linguagem de extensão.</p>
+<p>A vantagem em usar Lua para a configuração são muitas, começando pelo fato de que é uma linguagem de programação de verdade - diferente de VimScript e Vim9 que são usadas apenas para configurar o Vim - ela não só é uma execelente linguagem para usar como complemento em aplicações C como para embutir em programas, além de ser bastante popular no meio de Jogos.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstall -I neovim
-</span></span></code></pre></div><p>Siga as instruções de configuração recomendadas por especialistas, como as do Akita.</p>
+</span></span></code></pre></div><p><strong>Porque usar o Pacstall para instalar o Neovim?</strong></p>
+<blockquote>
+<p>A vantagem de instalar pelo <strong>pacstall</strong> ao invés do <strong>apt</strong> é que o Pacstall vai compilar e instalar a <em>última versão</em> do programa que é muito mais atualizada que a versão nos repositórios do Ubuntu e que vai ter melhor suporte a diversos plugins.</p>
+</blockquote>
+<p>Após instalar, é só usar <code>nvim</code> para abrir o Neovim.</p>
 <h2 id="instalando-o-docker">Instalando o Docker</h2>
 <p>Para instalar o Docker:</p>
 <ul>
